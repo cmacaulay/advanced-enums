@@ -8,12 +8,23 @@ class VendingMachine
     @inventory = Array.new
   end
 
-  #method add_snack takes an argument of snack
-  #inventory should initialize at zero
-  #maybe a hash with the name as a key, and inventory as the value?
-  
   def add_snack(snack)
+    inventory << (snack)
   end
 
+  def snacks_by_name
+    names =
+    @inventory.collect do |snack|
+      snack.name
+    end
+    names
+  end
 
+#like values become keys, snack names become their values within a hash
+  def how_many_snacks
+    @inventory.group_by do |snack|
+      snack.quantity
+    end
+  end
+  
 end
