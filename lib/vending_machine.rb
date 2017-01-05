@@ -34,7 +34,13 @@ class VendingMachine
 
   def total_num_items
     @inventory.reduce(0) do |amount, snack|
-      amount + snack.quantity 
+      amount + snack.quantity
+    end
+  end
+
+  def first_letters
+    @inventory.reduce("") do |first_letters, snack|
+      first_letters + ( snack.name[0] )
     end
   end
 
