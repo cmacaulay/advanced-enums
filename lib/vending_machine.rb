@@ -20,7 +20,6 @@ class VendingMachine
     names
   end
 
-#like values become keys, snack names become their values within a hash
   def how_many_snacks
     @inventory.group_by do |snack|
       snack.quantity
@@ -33,5 +32,10 @@ class VendingMachine
     end
   end
 
+  def total_num_items
+    @inventory.reduce(0) do |amount, snack|
+      amount + snack.quantity 
+    end
+  end
 
 end
