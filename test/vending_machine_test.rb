@@ -71,7 +71,6 @@ class VendingMachineTest < Minitest::Test
   end
 
   def test_can_collect_all_items_by_first_letter_of_alph
-    skip
     vm = VendingMachine.new
     snack1 = Snack.new("White Castle Burger", 1)
     snack2 = Snack.new("Snickers", 4)
