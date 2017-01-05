@@ -42,5 +42,12 @@ class VendingMachine
     end
   end
 
-  
+  def change_indexes
+    inventory.map.with_index do |snack, index|
+      index + 1
+    end
+  end
+
+
+
 end
