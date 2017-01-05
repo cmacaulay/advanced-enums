@@ -1,4 +1,4 @@
-require './lib/snack'
+# require './lib/snack'
 require 'pry'
 
 class VendingMachine
@@ -13,11 +13,9 @@ class VendingMachine
   end
 
   def snacks_by_name
-    names =
     inventory.collect do |snack|
       snack.name
     end
-    names
   end
 
   def how_many_snacks
@@ -44,4 +42,5 @@ class VendingMachine
     end
   end
 
+  
 end
