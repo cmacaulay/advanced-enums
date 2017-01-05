@@ -54,7 +54,6 @@ class VendingMachineTest < Minitest::Test
   end
 
   def test_can_collect_items_by_quantity
-    skip
     vm = VendingMachine.new
     snack1 = Snack.new("White Castle Burger", 1)
     snack2 = Snack.new("Snickers", 4)
