@@ -5,3 +5,5 @@ class Snack
     @quantity = quantity
   end
 end
+
+#snack initializes with an argument of name, and quantity
