@@ -26,5 +26,12 @@ class VendingMachine
       snack.quantity
     end
   end
-  
+
+  def inventory_by_alphabet
+    @inventory.group_by do |snack|
+      snack.name[0]
+    end
+  end
+
+
 end
